@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Desktop-icon</title>
+
+	<link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		
+		body
+		{
+			background-image: url(DSC_0203.JPG);
+			background-size: cover;
+			box-sizing: border-box;
+			font-family: sans-serif;
+			padding: 0;
+			margin: 0;
+		}
+		.middle
+		{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			text-align: center;
+		}
+		.btn
+		{
+			display: inline-block;
+			width: 90px;
+			height: 90px;
+			background: #f1f1f1;
+			margin: 10px;
+			border-radius: 30%;
+			box-shadow: 0 5px 15px -5px #00000070;
+			color: #3498db;
+			overflow: hidden;
+			position: relative;
+		}
+		.btn i
+		{
+			line-height: 90px;
+			font-size: 26px;
+			transition: 0.2s linear;
+		}
+		.btn:hover i{
+			transform: scale(1.5);
+			color: #f1f1f1;
+		}
+		.btn::before
+		{
+			content: "";
+			position: absolute;
+			width: 120%;
+			height: 120%;
+			background: #3498db;
+			transform: rotate(45deg);
+			left: -110%;
+			top: 90%;
+		}
+		.btn:hover::before
+		{
+			animation: aaa 0.7s 1;
+			top: -10%;
+			left: -10%;
+		}
+		@keyframes aaa
+		{
+			0%
+			{
+				left: -110%;
+				top: 90%;
+			}
+			50%
+			{
+				left: 10%;
+				top: -30%;
+			}
+			100%
+			{
+				top: -10%;
+				left: -10%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="middle">
+		<a class="btn" href="#" >
+			<i class="fa fa-facebook"></i>
+		</a>
+		<a class="btn" href="https://www.youtube.com/" target="_blank">
+			<i class="fa fa-youtube"></i>
+		</a>
+		<a class="btn" href="https://www.google.com/search?q=twitter&oq=twitter&aqs=chrome..69i57j69i60.3173j0j8&sourceid=chrome&ie=UTF-8" target="_blank">
+			<i class="fa fa-twitter"></i>
+		</a>
+		<a class="btn" href="https://www.instagram.com/" target="_blank">
+			<i class="fa fa-instagram"></i>
+		</a>
+		<a class="btn" href="https://www.google.com/search?q=google+translate+english+to+bangla&oq=google+trans&aqs=chrome.2.0j69i57j35i39j0l3.20305j0j7&sourceid=chrome&ie=UTF-8" target="_blank">
+			<i class="fa fa-google transition"></i>
+		</a>
+		<a class="btn" href="https://www.google.com/search?q=linkedin&oq=linkedin&aqs=chrome..69i57.6234j0j7&sourceid=chrome&ie=UTF-8" target="_blank">
+			<i class="fa fa-linkedin"></i>
+		</a>
+	</div>
+</body>
+</html>

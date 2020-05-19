@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Glowing Text Animation</title>
+	
+	<link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+		body
+		{
+
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			background: #000;
+			font-family: 'Bad Script',cursive;
+		}
+		h1{
+			margin: 0;
+			padding: 0;
+			color: #111;
+			font-size: 16em;
+		}
+		h1 span
+		{
+			
+			display: table-cell;
+			margin: 0;
+			padding: 0;
+			animation: animate 2s linear infinite;
+		}
+		h1.span:nth-child(1)
+		{
+			animation-delay: 0s;
+		}
+		h1.span:nth-child(2)
+		{
+			animation-delay: 0.25s;
+		}
+		h1.span:nth-child(3)
+		{
+			animation-delay: 0.50s;
+		}
+		h1.span:nth-child(4)
+		{
+			animation-delay: 0.75s;
+		}
+		h1.span:nth-child(5)
+		{
+			animation-delay: 1s;
+		}
+		h1.span:nth-child(6)
+		{
+			animation-delay: 1.25s;
+		}
+		.middle
+		{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			text-align: center;
+		}
+		.btn
+		{
+			display: inline-block;
+			width: 90px;
+			height: 90px;
+			background: #f1f1f1;
+			margin: 10px;
+			border-radius: 30%;
+			box-shadow: 0 5px 15px -5px #00000070;
+			color: #3498db;
+			overflow: hidden;
+			position: relative;
+		}
+		.btn i
+		{
+			line-height: 90px;
+			font-size: 26px;
+			transition: 0.2s linear;
+		}
+		.btn:hover i{
+			transform: scale(1.5);
+			color: #f1f1f1;
+		}
+		.btn::before
+		{
+			content: "";
+			position: absolute;
+			width: 120%;
+			height: 120%;
+			background: #3498db;
+			transform: rotate(45deg);
+			left: -110%;
+			top: 90%;
+		}
+		.btn:hover::before
+		{
+			animation: aaa 0.7s 1;
+			top: -10%;
+			left: -10%;
+		}
+		@keyframes aaa
+		{
+			0%
+			{
+				left: -110%;
+				top: 90%;
+			}
+			50%
+			{
+				left: 10%;
+				top: -30%;
+			}
+			100%
+			{
+				top: -10%;
+				left: -10%;
+			}
+		}
+		@keyframes animate{
+			0%,100%
+			{
+				color: #fff;
+				filter: blur(2px);
+				text-shadow:0 0 10px #00b3ff,
+							0 0 20px #00b3ff,
+							0 0 30px #00b3ff,
+							0 0 40px #00b3ff,
+							0 0 90px #00b3ff,
+							0 0 130px #00b3ff,
+							
+			}
+			5%,95%
+			{
+				color: #111;
+				filter: blur(0px);
+				text-align: 0 0 10px none;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>
+		<span>T</span>
+		<span>A</span>
+		<span>N</span>
+ 		<span>Z</span>
+		<span>I</span>
+		<span>M</span>
+	</h1>
+	<div class="middle">
+		<a class="btn" href="#" >
+			<i class="fa fa-facebook"></i>
+		</a>
+		<a class="btn" href="https://www.youtube.com/" target="_blank">
+			<i class="fa fa-youtube"></i>
+		</a>
+		<a class="btn" href="https://www.google.com/search?q=twitter&oq=twitter&aqs=chrome..69i57j69i60.3173j0j8&sourceid=chrome&ie=UTF-8" target="_blank">
+			<i class="fa fa-twitter"></i>
+		</a>
+		<a class="btn" href="https://www.instagram.com/" target="_blank">
+			<i class="fa fa-instagram"></i>
+		</a>
+		<a class="btn" href="https://www.google.com/search?q=google+translate+english+to+bangla&oq=google+trans&aqs=chrome.2.0j69i57j35i39j0l3.20305j0j7&sourceid=chrome&ie=UTF-8" target="_blank">
+			<i class="fa fa-google transition"></i>
+		</a>
+		<a class="btn" href="https://www.google.com/search?q=linkedin&oq=linkedin&aqs=chrome..69i57.6234j0j7&sourceid=chrome&ie=UTF-8" target="_blank">
+			<i class="fa fa-linkedin"></i>
+		</a>
+	</div>
+</body>
+</html>
